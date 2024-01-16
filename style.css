@@ -444,6 +444,11 @@ a {
     line-height: normal;
 }
 
+.newsletter-offer img {
+    width: 100%;
+    height: 100%;
+}
+
 
 /* Footer section styles  */
 
