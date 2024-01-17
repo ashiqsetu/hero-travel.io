@@ -59,6 +59,13 @@ a {
     display: inline-block;
     border: medium none;
     cursor: pointer;
+    transition: all 0.5s ease;
+    border: 2px solid transparent;
+}
+.button:not(.find-now-btn):hover {
+    border-color: #FF5400;
+    color: #FF5400;
+    background: transparent;
 }
 /* Header area styles  */
 .header-section {
@@ -248,10 +255,17 @@ a {
     gap: 24px;
     flex-wrap: wrap;
 }
-
+.single-destination {
+    transition: all 0.4s ease 0s;
+    overflow: hidden;
+}
 .single-destination img {
     width: 100%;
     height: 100%;
+    transition: all 0.4s ease 0s;
+}
+.single-destination:hover>img {
+    transform: scale(1.1);
 }
 .single-destination {
     position: relative;
@@ -265,6 +279,7 @@ a {
     height: 100%;
     border-radius: 16px;
     background: linear-gradient(0deg, rgba(19, 19, 24, 0.20) 0%, rgba(19, 19, 24, 0.20) 100%);
+    z-index: 2;
 }
 .single-destination h4 {
     margin-bottom: 0;
@@ -276,6 +291,7 @@ a {
     font-size: 28px;
     font-weight: 800;
     line-height: normal;
+    z-index: 3;
 }
 .single-destination:nth-child(1) {
     flex-basis: calc(50% - 12px);
@@ -425,7 +441,7 @@ a {
     background: #FF5400;
     padding: 30px;
     text-align: center;
-    transform: translate(-10px, -50px) rotate(-19.628deg);
+    transform: translate(-10px, -42px) rotate(-19.628deg);
 }
 .newsletter-offer-content h5 {
     color: #FFF;
@@ -448,6 +464,170 @@ a {
     width: 100%;
     height: 100%;
 }
+
+
+/* Deals & discount section styles  */
+
+.single-deal-discount {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* padding: 56px; */
+    position: relative;
+}
+.single-deal-discount:nth-child(n + 2) {
+    margin-top: 24px;
+}
+.single-deal-discount img {
+    width: 100%;
+}
+.deal-discount-content {
+    border-radius: 16px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    backdrop-filter: blur(2.5px);
+    padding: 50px 77px 50px 50px;
+    position: absolute;
+}
+.single-deal-discount:nth-child(odd) .deal-discount-content {
+    right: 56px;
+}
+.single-deal-discount:nth-child(even) .deal-discount-content {
+    left: 56px;
+}
+
+.deals-list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.deals-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.deals-list li i {
+    color: #FF5400;
+}
+
+.deal-discount-content h5 {
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: normal;
+    margin-top: 24px;
+    margin-bottom: 15px;
+}
+.deal-discount-content p {
+    color: #5A5A5D;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-bottom: 16px;
+    width: 450px;
+}
+.deal-discount-content h6 {
+    color: #FF5400;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 24px;
+}
+
+.see-all-packages {
+    text-align: center;
+    margin-top: 48px;
+}
+
+
+/* Place video area styles  */
+
+.place-video-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.place-video-content h2 {
+    color: #131318;
+    font-family: Mulish;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 60px;
+}
+.place-video-content p {
+    color: #5A5A5D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    margin: 24px 0;
+    padding-right: 15px;
+}
+
+.place-atmosphere-list {
+    margin-bottom: 32px;
+    padding-left: 15px;
+    padding-right: 55px;
+}
+.place-atmosphere-list li {
+    color: #131318;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    list-style: disc;
+}
+.place-atmosphere-list li:nth-child(n + 2) {
+    margin-top: 16px;
+}
+
+.place-video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+/* Blog area styles  */
+.blog-section {
+    padding-bottom: 100px;
+}
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.single-blog {
+    transition: all 0.3s ease 0s;
+}
+
+.blog-img img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.blog-summary {
+    margin-top: 7px;
+}
+
+.blog-summary h5 a {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #131318;
+    display: inline-block;
+}
+.single-blog:hover h5 a,
+.blog-summary h5 a:hover {
+    color: #FF5400;
+}
+.blog-summary p {
+    margin-bottom: 0;
+}
+
+
 
 
 /* Footer section styles  */
